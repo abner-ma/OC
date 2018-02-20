@@ -1,4 +1,5 @@
 language: c
-install:
+before_script:
   - chmod a+x ./build.sh
+script:
   - ./build.sh build
