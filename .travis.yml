@@ -1,4 +1,2 @@
 language: c
-install: make
-script:
-  - ./build.sh build
+install: ./build.sh build
