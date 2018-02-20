@@ -1,2 +1,4 @@
 language: c
-install: ./build.sh build
+install:
+  - chmod a+x ./build.sh
+  - ./build.sh build
