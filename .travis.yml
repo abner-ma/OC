@@ -1,5 +1,12 @@
+sudo: required
+dist: trusty
 language: c
+before_install:
+- sudo apt-get update
+- sudo apt-get -y install texlive-full
 before_script:
-  - chmod a+x ./build.sh
+- chmod a+x ./build.sh
 script:
-  - ./build.sh build
+- ./build.sh build
+- cd doc
+- xelatex vim.tex -interaction=nonstopmode
