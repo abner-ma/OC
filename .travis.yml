@@ -10,6 +10,7 @@ script:
 - ./build.sh build
 - cd doc
 - xelatex vim.tex -interaction=nonstopmode
+- cd ..
 before_deploy:
 - git config --global user.name "${U_NAME}"
 - git config --global user.email "${U_EMAIL}"
