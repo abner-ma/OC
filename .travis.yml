@@ -20,5 +20,5 @@ deploy:
   file: doc/vim.pdf
   skip_cleanup: true
   on:
-    tags: true
+    tags: false
     repo: abner-ma/OC
