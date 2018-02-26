@@ -10,3 +10,14 @@ script:
 - ./build.sh build
 - cd doc
 - xelatex vim.tex -interaction=nonstopmode
+before_deploy:
+- git config --global user.name "${U_NAME}"
+- git config --global user.email "${U_EMAIL}"
+deploy:
+  provider: releases
+  api_key:
+    secure: ${GH_REPO_TOKEN}
+  file: doc/vim.pdf
+  skip_cleanup: true
+  on:
+    tags: true
