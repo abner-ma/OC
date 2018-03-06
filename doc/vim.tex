@@ -1,5 +1,7 @@
-\documentclass{article}
-\usepackage[utf8]{inputenc}
+\documentclass[tikz,convert=pdf2svg]{standalone}
+\usepackage{tikz}
 \begin{document}
-(Type your content here.)
+    \begin{tikzpicture}
+        \draw [color=blue!50,->](0,0) node[left]{$A$}-- node [color=red!70,pos=0.25,above,sloped]{Hello}(3,3) node[right]{$B$};
+    \end{tikzpicture}
 \end{document}
