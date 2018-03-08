@@ -1,16 +1,9 @@
-sudo: required
 dist: trusty
 language: c
-before_install:
-- sudo apt-get update
-- sudo apt-get -y install texlive-full
 before_script:
 - chmod a+x ./build.sh
 script:
 - ./build.sh build
-- cd doc
-- xelatex vim.tex -interaction=nonstopmode
-- cd ..
 before_deploy:
 - git config --global user.name "${U_NAME}"
 - git config --global user.email "${U_EMAIL}"
@@ -19,8 +12,6 @@ deploy:
   provider: releases
   api_key:
     secure: ${GH_REPO_TOKEN}
-  file: doc/vim.pdf
-  skip_cleanup: true
   overwrite: true
   on:
     tags: false
