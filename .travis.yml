@@ -14,4 +14,4 @@ deploy:
     secure: ${GH_REPO_TOKEN}
   overwrite: true
   on:
-    tags: false
+    tags: true
